@@ -1,3 +1,6 @@
+// import statements always go at the beginning of a file 
+import java.util.Scanner; 
+
 /*
 
 Primitive Type - storing simple information/data (ex. int x = 5;)
@@ -27,7 +30,7 @@ public class Main {
    public static void main(String []args) {
       int num;
       num = 4;           
-      System.out.println(num);
+     // System.out.println(num);
 
       //declare a variable 
       double myGradeAverage;
@@ -38,10 +41,53 @@ public class Main {
       double myDreamGrade = 100.0;
 
       // we can format strings using concatenation (+)
-      System.out.println("My current grade is: " + myGradeAverage);
+     // System.out.println("My current grade is: " + myGradeAverage);
       // print statement for ideal grade 
-      System.out.println("My dream grade is " + myDreamGrade + "!");
+     // System.out.println("My dream grade is " + myDreamGrade + "!");
 
+      // we can use println or print to produce output 
+      System.out.print("Hi ");
+      System.out.print("there");
+      System.out.println("!");
+
+      // we can print special characters using an escape sequence \
+      System.out.println("\"");
+      System.out.println("\\");
+      System.out.println("I love computer science. \nIt is so cool.");
+
+      // example with all three escape sequences
+      System.out.println("She said\\\n\"I love computer science!\"");
+
+      // math operators + - * /
+      // when we do int division, it truncates our answer. It returns an int. 
+      int x = 5;
+      int y = 3;
+
+      //System.out.println(x/y);
+      // % gives us the remainder 
+      //System.out.println(x%y);
+
+      x = 6;
+      y = x;
+      x = 8;
+
+      // we can also update variable assignments by incrementing and decrementing 
+      // incrementing adds 1 to our value 
+      // decrementing subtracts 1 from our value 
+
+      x = x + 1; 
+      // x++ updates our variable even without the equal sign 
+      x++;
+
+      x = x - 1; 
+      // x-- updates our variable even without the equal sign 
+      x--;
+
+      System.out.println("Please type in a name in the input box below.");
+      Scanner scan = new Scanner(System.in);
+      String name = scan.nextLine();
+      System.out.println("Hello " + name);
+      scan.close();
 
    }
 }

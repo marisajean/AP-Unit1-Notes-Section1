@@ -83,11 +83,43 @@ public class Main {
       // x-- updates our variable even without the equal sign 
       x--;
 
+      /* 
       System.out.println("Please type in a name in the input box below.");
       Scanner scan = new Scanner(System.in);
       String name = scan.nextLine();
       System.out.println("Hello " + name);
-      scan.close();
+      scan.close(); 
+      */
 
+      // Lesson 1.5 Casting 
+      // We can cast to change data types for variables we have already defined 
+      int intNum = 4;
+      // we cast by including the new data type in () before our variable name 
+      System.out.println((double) intNum);
+      System.out.println(intNum);
+
+      double dbNum = 4.6;
+      System.out.println((int) dbNum);
+
+      double negNum = -3.4;
+      // when we cast doubles to ints, it truncates our decimal. It does NOT round. 
+      // We can round manually using math! 
+      // we can round positive numbers by adding .5 and casting 
+      int roundedPos = (int) (dbNum + .5);
+      System.out.println(roundedPos);
+
+      // we can round negative numbers by subtracting .5 and casting 
+      int roundedNeg = (int) (negNum - .5);
+      System.out.println(roundedNeg);
+
+      // coding challenge below 
+      int grade1 = 95; 
+      int grade2 = 82; 
+      int grade3 = 90;
+      int sum;
+      double average; 
+      sum = grade1 + grade2 + grade3;
+      average = (double) sum / 3;
+      System.out.println(average);
    }
 }
